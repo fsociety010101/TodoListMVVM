@@ -38,9 +38,19 @@ struct AddView: View {
         }
         .navigationTitle("Add an item 🖊️")
     func saveButtonPressed() {
+        if textIsAppropriate() {
             listViewModel.addItem(title: textFieldText)
             presentationMode.wrappedValue.dismiss() // go back on view hierarchy
+        }
     }
+    
+    func textIsAppropriate() -> Bool {
+        if textFieldText.count < 3 {
+            return false
+        }
+        return true
+    }
+    
     }
 }
 
