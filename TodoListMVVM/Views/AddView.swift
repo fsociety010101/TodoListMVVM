@@ -22,7 +22,7 @@ struct AddView: View {
                 .cornerRadius(10)
                 
                 Button(action: {
-                    
+                    saveButtonPressed()
                 }, label: {
                     Text("Save".uppercased())
                         .foregroundColor(.white)
@@ -36,6 +36,9 @@ struct AddView: View {
             .padding(16)
         }
         .navigationTitle("Add an item 🖊️")
+    func saveButtonPressed() {
+            listViewModel.addItem(title: textFieldText)
+    }
     }
 }
 
