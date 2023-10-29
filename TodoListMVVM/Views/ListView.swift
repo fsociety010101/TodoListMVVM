@@ -17,6 +17,7 @@ struct ListView: View {
                 ListRowView(item: item)
             }
             .onDelete(perform: listViewModel.deleteItem)
+            .onMove(perform: listViewModel.moveItem)
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Todo List 📝")
