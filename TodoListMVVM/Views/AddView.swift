@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     
+    @Environment(\.presentationMode) var presentationMode // tracks current view to be able to go back at any point
     @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText: String = ""
     
@@ -38,6 +39,7 @@ struct AddView: View {
         .navigationTitle("Add an item 🖊️")
     func saveButtonPressed() {
             listViewModel.addItem(title: textFieldText)
+            presentationMode.wrappedValue.dismiss() // go back on view hierarchy
     }
     }
 }
