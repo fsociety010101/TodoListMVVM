@@ -11,7 +11,7 @@ import Foundation
 
 /* Identifiable to use inside a loop */
 
-struct ItemModel: Identifiable {
+struct ItemModel: Identifiable, Codable {
     let id: String
     let title: String
     let isCompleted: Bool
