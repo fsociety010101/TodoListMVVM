@@ -1,10 +1,9 @@
 # What I've covered: 
 
 - Custom Data Models
-- Persistent User Data:
-    - ```UserDefaults```
     - ```Identifiable```
     - ```Codable```
+- Persistent User Data with ```UserDefaults```
 - MVVM Architecture
     - Viev Model
     - ```@StateObject```
